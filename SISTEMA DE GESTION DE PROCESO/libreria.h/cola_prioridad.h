@@ -28,7 +28,7 @@ public:
         }
     }
     void mostrar() {
-        std::cout << "Procesos listos para ejecución: " << cola.size() << "\n";
+        std::cout << "Procesos listos para ejecucion: " << cola.size() << "\n";
     }
 };
 

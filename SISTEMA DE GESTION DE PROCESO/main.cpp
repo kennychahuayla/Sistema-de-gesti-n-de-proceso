@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 #include "proceso.h"
 #include "lista_enlazada.h"
 #include "cola_prioridad.h"
@@ -11,21 +12,21 @@ int main() {
     PilaMemoria pila;
     int opcion;
     do {
-        std::cout << "\n--- MENÚ PRINCIPAL ---\n";
-        std::cout << "1. Registrar proceso\n";
-        std::cout << "2. Ejecutar proceso\n";
-        std::cout << "3. Liberar memoria\n";
-        std::cout << "4. Mostrar estructuras\n";
-        std::cout << "5. Salir\n";
-        std::cout << "Ingrese opción: ";
-        std::cin >> opcion;
+        cout << "\n--- MENÚ PRINCIPAL ---\n";
+        cout << "1. Registrar proceso\n";
+        cout << "2. Ejecutar proceso\n";
+        cout << "3. Liberar memoria\n";
+        cout << "4. Mostrar estructuras\n";
+        cout << "5. Salir\n";
+        cout << "Ingrese opción: ";
+        cin >> opcion;
         switch(opcion) {
             case 1: {
                 int id, prioridad;
-                std::string nombre;
-                std::cout << "ID: "; std::cin >> id;
-                std::cout << "Nombre: "; std::cin >> nombre;
-                std::cout << "Prioridad (1=Alta, 2=Media, 3=Baja): "; std::cin >> prioridad;
+                string nombre;
+                cout << "ID: "; std::cin >> id;
+                cout << "Nombre: "; std::cin >> nombre;
+                cout << "Prioridad (1=Alta, 2=Media, 3=Baja): "; std::cin >> prioridad;
                 Proceso p(id, nombre, prioridad);
                 lista.insertar(p);
                 cola.encolar(p);
